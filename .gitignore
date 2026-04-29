@@ -1,0 +1,14 @@
+# Generated evaluation outputs (large PNGs + CSVs, recreatable by running evaluate_confusion_matrix.py)
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

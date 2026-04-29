@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(python3 C:/universal_analysis_planner/data/append_rows.py)",
+      "PowerShell(python C:\\\\universal_analysis_planner\\\\data\\\\append_rows.py)",
+      "PowerShell(\\(Get-Content C:\\\\universal_analysis_planner\\\\data\\\\training_data.csv\\).Count)",
+      "PowerShell(python C:\\\\universal_analysis_planner\\\\data\\\\append_rows.py; \\(Get-Content C:\\\\universal_analysis_planner\\\\data\\\\training_data.csv\\).Count)",
+      "Bash(python -c \"import sys; sys.path.insert\\(0, 'src'\\); from predict import CONFIDENCE_THRESHOLD, predict_with_confidence; print\\('predict.py OK, threshold=', CONFIDENCE_THRESHOLD\\)\")",
+      "Bash(python -c \"import evaluate_confusion_matrix; print\\('evaluate_confusion_matrix.py OK'\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)"
+    ]
+  }
+}

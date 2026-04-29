@@ -1,0 +1,3245 @@
+{
+  "summary": {
+    "total_cases": 40,
+    "passed": 40,
+    "json_valid": 40,
+    "intent_correct": 40,
+    "operation_correct": 40,
+    "best_chart_correct": 40,
+    "chart_required_correct": 40,
+    "needs_numeric_correct": 40,
+    "needs_category_correct": 40,
+    "needs_datetime_correct": 40,
+    "needs_text_correct": 40,
+    "accuracy_percentages": {
+      "overall_pass_rate": 100.0,
+      "json_valid": 100.0,
+      "intent_correct": 100.0,
+      "operation_correct": 100.0,
+      "best_chart_correct": 100.0,
+      "chart_required_correct": 100.0,
+      "needs_numeric_correct": 100.0,
+      "needs_category_correct": 100.0,
+      "needs_datetime_correct": 100.0,
+      "needs_text_correct": 100.0
+    }
+  },
+  "results": [
+    {
+      "id": "hard_001",
+      "question": "What is the total sales?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "aggregation",
+        "answer_depth": "direct_answer",
+        "operation": "sum",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.933,
+          "answer_depth": 0.975,
+          "operation": 0.81,
+          "best_chart": 0.946,
+          "chart_required": 0.983,
+          "needs_numeric": 0.964,
+          "needs_category": 0.971,
+          "needs_datetime": 0.976,
+          "needs_text": 0.995
+        },
+        "min_confidence": 0.81,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "kpi_card",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "aggregation_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "aggregation",
+          "operation": "sum",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "aggregation",
+        "operation": "sum",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "aggregation_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.81
+    },
+    {
+      "id": "hard_002",
+      "question": "How much revenue did we make overall?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "aggregation",
+        "answer_depth": "direct_answer",
+        "operation": "sum",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.482,
+          "answer_depth": 0.699,
+          "operation": 0.617,
+          "best_chart": 0.588,
+          "chart_required": 0.74,
+          "needs_numeric": 0.941,
+          "needs_category": 0.794,
+          "needs_datetime": 0.737,
+          "needs_text": 0.993
+        },
+        "min_confidence": 0.482,
+        "low_confidence": [
+          "intent",
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "kpi_card",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "aggregation_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "aggregation",
+          "operation": "sum",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "aggregation",
+        "operation": "sum",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "aggregation_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.482
+    },
+    {
+      "id": "hard_003",
+      "question": "Give me the company-wide amount sold",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "aggregation",
+        "answer_depth": "direct_answer",
+        "operation": "sum",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.154,
+          "answer_depth": 0.355,
+          "operation": 0.131,
+          "best_chart": 0.276,
+          "chart_required": 0.702,
+          "needs_numeric": 0.865,
+          "needs_category": 0.6,
+          "needs_datetime": 0.621,
+          "needs_text": 0.992
+        },
+        "min_confidence": 0.131,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_category",
+          "needs_datetime"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "kpi_card",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "aggregation_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "summary_analysis",
+          "operation": "full_dataset_analysis",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "aggregation",
+        "operation": "sum",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "aggregation_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.131
+    },
+    {
+      "id": "hard_004",
+      "question": "What is the average order value?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "aggregation",
+        "answer_depth": "direct_answer",
+        "operation": "mean",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.996,
+          "answer_depth": 0.999,
+          "operation": 0.89,
+          "best_chart": 0.997,
+          "chart_required": 1.0,
+          "needs_numeric": 0.976,
+          "needs_category": 0.998,
+          "needs_datetime": 0.991,
+          "needs_text": 0.996
+        },
+        "min_confidence": 0.89,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "kpi_card",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "aggregation_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "aggregation",
+          "operation": "mean",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "aggregation",
+        "operation": "mean",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "aggregation_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.89
+    },
+    {
+      "id": "hard_005",
+      "question": "Show me the maximum profit",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "aggregation",
+        "answer_depth": "direct_answer",
+        "operation": "max",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.219,
+          "answer_depth": 0.572,
+          "operation": 0.204,
+          "best_chart": 0.237,
+          "chart_required": 0.601,
+          "needs_numeric": 0.755,
+          "needs_category": 0.77,
+          "needs_datetime": 0.867,
+          "needs_text": 0.992
+        },
+        "min_confidence": 0.204,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "chart_required"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "kpi_card",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "aggregation_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "schema_question",
+          "operation": "max",
+          "best_chart": "table"
+        }
+      },
+      "expected": {
+        "intent": "aggregation",
+        "operation": "max",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "aggregation_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.204
+    },
+    {
+      "id": "hard_006",
+      "question": "What is the lowest expense recorded?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "aggregation",
+        "answer_depth": "direct_answer",
+        "operation": "min",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.938,
+          "answer_depth": 0.978,
+          "operation": 0.929,
+          "best_chart": 0.952,
+          "chart_required": 0.986,
+          "needs_numeric": 0.951,
+          "needs_category": 0.979,
+          "needs_datetime": 0.969,
+          "needs_text": 0.994
+        },
+        "min_confidence": 0.929,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "kpi_card",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "aggregation_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "aggregation",
+          "operation": "min",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "aggregation",
+        "operation": "min",
+        "best_chart": "kpi_card",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "aggregation_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.929
+    },
+    {
+      "id": "hard_007",
+      "question": "Which region brought in the most revenue?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "ranking",
+        "answer_depth": "small_summary",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.367,
+          "answer_depth": 0.657,
+          "operation": 0.298,
+          "best_chart": 0.395,
+          "chart_required": 0.857,
+          "needs_numeric": 0.907,
+          "needs_category": 0.632,
+          "needs_datetime": 0.937,
+          "needs_text": 0.986
+        },
+        "min_confidence": 0.298,
+        "low_confidence": [
+          "intent",
+          "operation",
+          "best_chart",
+          "needs_category"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "horizontal_bar_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "ranking_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "ranking",
+          "operation": "groupby_sum_sort_desc",
+          "best_chart": "horizontal_bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "ranking",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "ranking_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.298
+    },
+    {
+      "id": "hard_008",
+      "question": "Who sold the most?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "ranking",
+        "answer_depth": "small_summary",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.248,
+          "answer_depth": 0.396,
+          "operation": 0.182,
+          "best_chart": 0.263,
+          "chart_required": 0.828,
+          "needs_numeric": 0.89,
+          "needs_category": 0.677,
+          "needs_datetime": 0.829,
+          "needs_text": 0.983
+        },
+        "min_confidence": 0.182,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "horizontal_bar_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "ranking_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "ranking",
+          "operation": "groupby_sum_sort_desc",
+          "best_chart": "horizontal_bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "ranking",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "ranking_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.182
+    },
+    {
+      "id": "hard_009",
+      "question": "Find the bottom performing products by profit",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "ranking",
+        "answer_depth": "small_summary",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.408,
+          "answer_depth": 0.629,
+          "operation": 0.33,
+          "best_chart": 0.432,
+          "chart_required": 0.894,
+          "needs_numeric": 0.938,
+          "needs_category": 0.796,
+          "needs_datetime": 0.916,
+          "needs_text": 0.992
+        },
+        "min_confidence": 0.33,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "horizontal_bar_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "ranking_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "ranking",
+          "operation": "groupby_sum_sort_desc",
+          "best_chart": "horizontal_bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "ranking",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "ranking_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.33
+    },
+    {
+      "id": "hard_010",
+      "question": "Rank departments based on total spending",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "ranking",
+        "answer_depth": "small_summary",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.725,
+          "answer_depth": 0.823,
+          "operation": 0.561,
+          "best_chart": 0.751,
+          "chart_required": 0.75,
+          "needs_numeric": 0.963,
+          "needs_category": 0.841,
+          "needs_datetime": 0.965,
+          "needs_text": 0.995
+        },
+        "min_confidence": 0.561,
+        "low_confidence": [
+          "operation"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "horizontal_bar_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "ranking_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "ranking",
+          "operation": "groupby_sum_sort_desc",
+          "best_chart": "horizontal_bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "ranking",
+        "operation": "groupby_sum_sort_desc",
+        "best_chart": "horizontal_bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "ranking_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.561
+    },
+    {
+      "id": "hard_011",
+      "question": "Break down revenue across customer segments",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "comparison",
+        "answer_depth": "visual_answer",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.927,
+          "answer_depth": 0.959,
+          "operation": 0.857,
+          "best_chart": 0.944,
+          "chart_required": 0.964,
+          "needs_numeric": 0.967,
+          "needs_category": 0.961,
+          "needs_datetime": 0.973,
+          "needs_text": 0.991
+        },
+        "min_confidence": 0.857,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "comparison_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "comparison",
+          "operation": "groupby_sum",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "comparison",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "comparison_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.857
+    },
+    {
+      "id": "hard_012",
+      "question": "Compare profit for each product category",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "comparison",
+        "answer_depth": "visual_answer",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.779,
+          "answer_depth": 0.853,
+          "operation": 0.669,
+          "best_chart": 0.804,
+          "chart_required": 0.961,
+          "needs_numeric": 0.975,
+          "needs_category": 0.885,
+          "needs_datetime": 0.888,
+          "needs_text": 0.995
+        },
+        "min_confidence": 0.669,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "comparison_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "comparison",
+          "operation": "groupby_sum",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "comparison",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "comparison_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.669
+    },
+    {
+      "id": "hard_013",
+      "question": "Give me a regional sales breakdown",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "comparison",
+        "answer_depth": "visual_answer",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.337,
+          "answer_depth": 0.531,
+          "operation": 0.279,
+          "best_chart": 0.398,
+          "chart_required": 0.856,
+          "needs_numeric": 0.936,
+          "needs_category": 0.753,
+          "needs_datetime": 0.561,
+          "needs_text": 0.995
+        },
+        "min_confidence": 0.279,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_datetime"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "comparison_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "summary_analysis",
+          "operation": "full_dataset_analysis",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "comparison",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "comparison_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.279
+    },
+    {
+      "id": "hard_014",
+      "question": "Show order volume by market segment",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "comparison",
+        "answer_depth": "visual_answer",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.657,
+          "answer_depth": 0.859,
+          "operation": 0.527,
+          "best_chart": 0.643,
+          "chart_required": 0.863,
+          "needs_numeric": 0.97,
+          "needs_category": 0.724,
+          "needs_datetime": 0.972,
+          "needs_text": 0.999
+        },
+        "min_confidence": 0.527,
+        "low_confidence": [
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "comparison",
+          "operation": "groupby_sum",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "comparison",
+        "operation": "groupby_sum",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.527
+    },
+    {
+      "id": "hard_015",
+      "question": "How has revenue changed month by month?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "trend_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.917,
+          "answer_depth": 0.844,
+          "operation": 0.848,
+          "best_chart": 0.934,
+          "chart_required": 0.953,
+          "needs_numeric": 0.96,
+          "needs_category": 0.937,
+          "needs_datetime": 0.97,
+          "needs_text": 0.992
+        },
+        "min_confidence": 0.844,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "trend_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "trend_analysis",
+          "operation": "time_groupby_sum",
+          "best_chart": "line_chart"
+        }
+      },
+      "expected": {
+        "intent": "trend_analysis",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "trend_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.844
+    },
+    {
+      "id": "hard_016",
+      "question": "Plot the weekly order trend",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "trend_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.978,
+          "answer_depth": 0.846,
+          "operation": 0.95,
+          "best_chart": 0.972,
+          "chart_required": 0.832,
+          "needs_numeric": 0.95,
+          "needs_category": 0.989,
+          "needs_datetime": 0.989,
+          "needs_text": 0.996
+        },
+        "min_confidence": 0.832,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "trend_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "trend_analysis",
+          "operation": "time_groupby_sum",
+          "best_chart": "line_chart"
+        }
+      },
+      "expected": {
+        "intent": "trend_analysis",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "trend_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.832
+    },
+    {
+      "id": "hard_017",
+      "question": "Track customer signups over time",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "trend_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.934,
+          "answer_depth": 0.937,
+          "operation": 0.888,
+          "best_chart": 0.925,
+          "chart_required": 0.959,
+          "needs_numeric": 0.964,
+          "needs_category": 0.933,
+          "needs_datetime": 0.964,
+          "needs_text": 0.991
+        },
+        "min_confidence": 0.888,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "trend_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "trend_analysis",
+          "operation": "time_groupby_sum",
+          "best_chart": "line_chart"
+        }
+      },
+      "expected": {
+        "intent": "trend_analysis",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "trend_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.888
+    },
+    {
+      "id": "hard_018",
+      "question": "Show the sales timeline",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "trend_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.212,
+          "answer_depth": 0.54,
+          "operation": 0.153,
+          "best_chart": 0.229,
+          "chart_required": 0.65,
+          "needs_numeric": 0.746,
+          "needs_category": 0.803,
+          "needs_datetime": 0.922,
+          "needs_text": 0.996
+        },
+        "min_confidence": 0.153,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "trend_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "schema_question",
+          "operation": "list_columns",
+          "best_chart": "table"
+        }
+      },
+      "expected": {
+        "intent": "trend_analysis",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "trend_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.153
+    },
+    {
+      "id": "hard_019",
+      "question": "Are sales and profit related?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "correlation",
+        "answer_depth": "visual_answer",
+        "operation": "correlation",
+        "best_chart": "scatter_plot",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.895,
+          "answer_depth": 0.779,
+          "operation": 0.83,
+          "best_chart": 0.917,
+          "chart_required": 0.906,
+          "needs_numeric": 0.906,
+          "needs_category": 0.886,
+          "needs_datetime": 0.899,
+          "needs_text": 0.988
+        },
+        "min_confidence": 0.779,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "scatter_plot",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "correlation_pair_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "correlation",
+          "operation": "correlation",
+          "best_chart": "scatter_plot"
+        }
+      },
+      "expected": {
+        "intent": "correlation",
+        "operation": "correlation",
+        "best_chart": "scatter_plot",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "correlation_pair_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.779
+    },
+    {
+      "id": "hard_020",
+      "question": "Does discount affect profit?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "correlation",
+        "answer_depth": "visual_answer",
+        "operation": "correlation",
+        "best_chart": "scatter_plot",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.189,
+          "answer_depth": 0.423,
+          "operation": 0.166,
+          "best_chart": 0.197,
+          "chart_required": 0.775,
+          "needs_numeric": 0.922,
+          "needs_category": 0.647,
+          "needs_datetime": 0.902,
+          "needs_text": 0.994
+        },
+        "min_confidence": 0.166,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_category"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "scatter_plot",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "correlation_pair_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "comparison",
+          "operation": "groupby_sum",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "correlation",
+        "operation": "correlation",
+        "best_chart": "scatter_plot",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "correlation_pair_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.166
+    },
+    {
+      "id": "hard_021",
+      "question": "Create a heatmap for all financial metrics",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "correlation",
+        "answer_depth": "visual_answer",
+        "operation": "correlation_heatmap",
+        "best_chart": "heatmap",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.158,
+          "answer_depth": 0.622,
+          "operation": 0.136,
+          "best_chart": 0.238,
+          "chart_required": 0.78,
+          "needs_numeric": 0.838,
+          "needs_category": 0.559,
+          "needs_datetime": 0.615,
+          "needs_text": 0.994
+        },
+        "min_confidence": 0.136,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_category",
+          "needs_datetime"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "correlation_heatmap_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "forecasting",
+          "operation": "forecast",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "correlation",
+        "operation": "correlation_heatmap",
+        "best_chart": "heatmap",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "correlation_heatmap_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.136
+    },
+    {
+      "id": "hard_022",
+      "question": "Show relationships among all numeric columns",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "correlation",
+        "answer_depth": "visual_answer",
+        "operation": "correlation_heatmap",
+        "best_chart": "heatmap",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.295,
+          "answer_depth": 0.5,
+          "operation": 0.483,
+          "best_chart": 0.615,
+          "chart_required": 0.615,
+          "needs_numeric": 0.591,
+          "needs_category": 0.844,
+          "needs_datetime": 0.882,
+          "needs_text": 0.992
+        },
+        "min_confidence": 0.295,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "chart_required",
+          "needs_numeric"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "correlation_heatmap_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "schema_question",
+          "operation": "correlation_heatmap",
+          "best_chart": "heatmap"
+        }
+      },
+      "expected": {
+        "intent": "correlation",
+        "operation": "correlation_heatmap",
+        "best_chart": "heatmap",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "correlation_heatmap_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.295
+    },
+    {
+      "id": "hard_023",
+      "question": "What does the sales distribution look like?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "distribution",
+        "answer_depth": "visual_answer",
+        "operation": "distribution",
+        "best_chart": "histogram",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.251,
+          "answer_depth": 0.392,
+          "operation": 0.194,
+          "best_chart": 0.25,
+          "chart_required": 0.541,
+          "needs_numeric": 0.841,
+          "needs_category": 0.879,
+          "needs_datetime": 0.946,
+          "needs_text": 0.995
+        },
+        "min_confidence": 0.194,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "chart_required"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "histogram",
+          "box_plot",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "distribution_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "distribution",
+          "operation": "distribution",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "distribution",
+        "operation": "distribution",
+        "best_chart": "histogram",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "distribution_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.194
+    },
+    {
+      "id": "hard_024",
+      "question": "Are there unusual values in revenue?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "diagnostic_analysis",
+        "answer_depth": "deep_analysis",
+        "operation": "diagnostic_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.512,
+          "answer_depth": 0.447,
+          "operation": 0.593,
+          "best_chart": 0.666,
+          "chart_required": 0.53,
+          "needs_numeric": 0.583,
+          "needs_category": 0.966,
+          "needs_datetime": 0.951,
+          "needs_text": 0.99
+        },
+        "min_confidence": 0.447,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "chart_required",
+          "needs_numeric"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "kpi_cards",
+          "bar_chart",
+          "line_chart",
+          "histogram",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "diagnostic_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "distribution",
+          "operation": "outlier_check",
+          "best_chart": "box_plot"
+        }
+      },
+      "expected": {
+        "intent": "diagnostic_analysis",
+        "operation": "diagnostic_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "diagnostic_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.447
+    },
+    {
+      "id": "hard_025",
+      "question": "Find outliers in order value",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "distribution",
+        "answer_depth": "visual_answer",
+        "operation": "outlier_check",
+        "best_chart": "box_plot",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.964,
+          "answer_depth": 0.933,
+          "operation": 0.978,
+          "best_chart": 0.992,
+          "chart_required": 0.877,
+          "needs_numeric": 0.968,
+          "needs_category": 0.984,
+          "needs_datetime": 0.952,
+          "needs_text": 0.99
+        },
+        "min_confidence": 0.877,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "box_plot",
+          "histogram",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "distribution_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "distribution",
+          "operation": "outlier_check",
+          "best_chart": "box_plot"
+        }
+      },
+      "expected": {
+        "intent": "distribution",
+        "operation": "outlier_check",
+        "best_chart": "box_plot",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "distribution_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.877
+    },
+    {
+      "id": "hard_026",
+      "question": "Analyze this dataset and give key insights",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "summary_analysis",
+        "answer_depth": "deep_analysis",
+        "operation": "full_dataset_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.99,
+          "answer_depth": 0.975,
+          "operation": 0.978,
+          "best_chart": 0.951,
+          "chart_required": 0.945,
+          "needs_numeric": 0.929,
+          "needs_category": 0.864,
+          "needs_datetime": 0.978,
+          "needs_text": 0.983
+        },
+        "min_confidence": 0.864,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "kpi_cards",
+          "bar_chart",
+          "line_chart",
+          "histogram",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "summary_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "summary_analysis",
+          "operation": "full_dataset_analysis",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "summary_analysis",
+        "operation": "full_dataset_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "summary_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.864
+    },
+    {
+      "id": "hard_027",
+      "question": "Give me a business overview of this file",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "summary_analysis",
+        "answer_depth": "deep_analysis",
+        "operation": "full_dataset_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.773,
+          "answer_depth": 0.769,
+          "operation": 0.689,
+          "best_chart": 0.7,
+          "chart_required": 0.92,
+          "needs_numeric": 0.935,
+          "needs_category": 0.707,
+          "needs_datetime": 0.789,
+          "needs_text": 0.994
+        },
+        "min_confidence": 0.689,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "kpi_cards",
+          "bar_chart",
+          "line_chart",
+          "histogram",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "summary_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "summary_analysis",
+          "operation": "full_dataset_analysis",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "summary_analysis",
+        "operation": "full_dataset_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "summary_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.689
+    },
+    {
+      "id": "hard_028",
+      "question": "What are the main insights here?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "summary_analysis",
+        "answer_depth": "deep_analysis",
+        "operation": "full_dataset_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.254,
+          "answer_depth": 0.663,
+          "operation": 0.104,
+          "best_chart": 0.355,
+          "chart_required": 0.825,
+          "needs_numeric": 0.509,
+          "needs_category": 0.803,
+          "needs_datetime": 0.846,
+          "needs_text": 0.973
+        },
+        "min_confidence": 0.104,
+        "low_confidence": [
+          "intent",
+          "operation",
+          "best_chart",
+          "needs_numeric"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "kpi_cards",
+          "bar_chart",
+          "line_chart",
+          "histogram",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "summary_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "aggregation",
+          "operation": "full_dataset_analysis",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "summary_analysis",
+        "operation": "full_dataset_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "summary_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.104
+    },
+    {
+      "id": "hard_029",
+      "question": "Check if the dataset has duplicate records",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "data_quality",
+        "answer_depth": "data_quality_answer",
+        "operation": "duplicate_check",
+        "best_chart": "table",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.854,
+          "answer_depth": 0.93,
+          "operation": 0.63,
+          "best_chart": 0.851,
+          "chart_required": 0.941,
+          "needs_numeric": 0.973,
+          "needs_category": 0.847,
+          "needs_datetime": 0.889,
+          "needs_text": 0.993
+        },
+        "min_confidence": 0.63,
+        "low_confidence": [
+          "operation"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "table",
+          "kpi_card"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "data_quality_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "data_quality",
+          "operation": "duplicate_check",
+          "best_chart": "table"
+        }
+      },
+      "expected": {
+        "intent": "data_quality",
+        "operation": "duplicate_check",
+        "best_chart": "table",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "data_quality_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.63
+    },
+    {
+      "id": "hard_030",
+      "question": "Which fields have blank values?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "data_quality",
+        "answer_depth": "data_quality_answer",
+        "operation": "null_check",
+        "best_chart": "table",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.567,
+          "answer_depth": 0.675,
+          "operation": 0.527,
+          "best_chart": 0.69,
+          "chart_required": 0.773,
+          "needs_numeric": 0.779,
+          "needs_category": 0.868,
+          "needs_datetime": 0.959,
+          "needs_text": 0.986
+        },
+        "min_confidence": 0.527,
+        "low_confidence": [
+          "intent",
+          "operation"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "table",
+          "kpi_card"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "incomplete_data_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "data_quality",
+          "operation": "null_check",
+          "best_chart": "table"
+        }
+      },
+      "expected": {
+        "intent": "data_quality",
+        "operation": "null_check",
+        "best_chart": "table",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "incomplete_data_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.527
+    },
+    {
+      "id": "hard_031",
+      "question": "Are there bad records in this data?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "data_quality",
+        "answer_depth": "data_quality_answer",
+        "operation": "data_quality_summary",
+        "best_chart": "table",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.666,
+          "answer_depth": 0.814,
+          "operation": 0.149,
+          "best_chart": 0.714,
+          "chart_required": 0.879,
+          "needs_numeric": 0.966,
+          "needs_category": 0.919,
+          "needs_datetime": 0.829,
+          "needs_text": 0.989
+        },
+        "min_confidence": 0.149,
+        "low_confidence": [
+          "operation"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "table",
+          "kpi_card"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "data_quality_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "data_quality",
+          "operation": "null_check",
+          "best_chart": "table"
+        }
+      },
+      "expected": {
+        "intent": "data_quality",
+        "operation": "data_quality_summary",
+        "best_chart": "table",
+        "chart_required": false,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": false,
+          "needs_datetime": false,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "data_quality_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.149
+    },
+    {
+      "id": "hard_032",
+      "question": "Summarize customer complaints",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "text_analysis",
+        "answer_depth": "small_summary",
+        "operation": "text_summary",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": true
+        },
+        "confidence_scores": {
+          "intent": 0.277,
+          "answer_depth": 0.355,
+          "operation": 0.391,
+          "best_chart": 0.457,
+          "chart_required": 0.862,
+          "needs_numeric": 0.568,
+          "needs_category": 0.761,
+          "needs_datetime": 0.843,
+          "needs_text": 0.658
+        },
+        "min_confidence": 0.277,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_numeric"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "text_summary_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "text_analysis",
+          "operation": "text_summary",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "text_analysis",
+        "operation": "text_summary",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": true
+        }
+      },
+      "rules_fired": [
+        "text_summary_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.277
+    },
+    {
+      "id": "hard_033",
+      "question": "Do the reviews sound negative?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "text_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "sentiment_summary",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": true
+        },
+        "confidence_scores": {
+          "intent": 0.328,
+          "answer_depth": 0.535,
+          "operation": 0.197,
+          "best_chart": 0.374,
+          "chart_required": 0.626,
+          "needs_numeric": 0.705,
+          "needs_category": 0.587,
+          "needs_datetime": 0.904,
+          "needs_text": 0.915
+        },
+        "min_confidence": 0.197,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "chart_required",
+          "needs_category"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "sentiment_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "aggregation",
+          "operation": "sum",
+          "best_chart": "kpi_card"
+        }
+      },
+      "expected": {
+        "intent": "text_analysis",
+        "operation": "sentiment_summary",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": true
+        }
+      },
+      "rules_fired": [
+        "sentiment_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.197
+    },
+    {
+      "id": "hard_034",
+      "question": "What topics are mentioned most in support tickets?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "text_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "word_frequency",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": true
+        },
+        "confidence_scores": {
+          "intent": 0.592,
+          "answer_depth": 0.453,
+          "operation": 0.369,
+          "best_chart": 0.234,
+          "chart_required": 0.697,
+          "needs_numeric": 0.838,
+          "needs_category": 0.618,
+          "needs_datetime": 0.878,
+          "needs_text": 0.775
+        },
+        "min_confidence": 0.234,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_category"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "bar_chart",
+          "horizontal_bar_chart",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "word_frequency_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "text_analysis",
+          "operation": "text_summary",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "text_analysis",
+        "operation": "word_frequency",
+        "best_chart": "bar_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": false,
+          "needs_category": true,
+          "needs_datetime": false,
+          "needs_text": true
+        }
+      },
+      "rules_fired": [
+        "word_frequency_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.234
+    },
+    {
+      "id": "hard_035",
+      "question": "Forecast next month revenue",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "forecasting",
+        "answer_depth": "deep_analysis",
+        "operation": "forecast",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.873,
+          "answer_depth": 0.886,
+          "operation": 0.799,
+          "best_chart": 0.856,
+          "chart_required": 0.931,
+          "needs_numeric": 0.964,
+          "needs_category": 0.928,
+          "needs_datetime": 0.93,
+          "needs_text": 0.992
+        },
+        "min_confidence": 0.799,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "forecasting_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "forecasting",
+          "operation": "forecast",
+          "best_chart": "line_chart"
+        }
+      },
+      "expected": {
+        "intent": "forecasting",
+        "operation": "forecast",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "forecasting_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.799
+    },
+    {
+      "id": "hard_036",
+      "question": "Predict upcoming demand",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "forecasting",
+        "answer_depth": "deep_analysis",
+        "operation": "forecast",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.31,
+          "answer_depth": 0.395,
+          "operation": 0.261,
+          "best_chart": 0.316,
+          "chart_required": 0.722,
+          "needs_numeric": 0.92,
+          "needs_category": 0.764,
+          "needs_datetime": 0.65,
+          "needs_text": 0.997
+        },
+        "min_confidence": 0.261,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "forecasting_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "forecasting",
+          "operation": "forecast",
+          "best_chart": "line_chart"
+        }
+      },
+      "expected": {
+        "intent": "forecasting",
+        "operation": "forecast",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "forecasting_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.261
+    },
+    {
+      "id": "hard_037",
+      "question": "Why did revenue drop?",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "diagnostic_analysis",
+        "answer_depth": "deep_analysis",
+        "operation": "diagnostic_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.941,
+          "answer_depth": 0.958,
+          "operation": 0.896,
+          "best_chart": 0.934,
+          "chart_required": 0.945,
+          "needs_numeric": 0.959,
+          "needs_category": 0.918,
+          "needs_datetime": 0.96,
+          "needs_text": 0.991
+        },
+        "min_confidence": 0.896,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "kpi_cards",
+          "bar_chart",
+          "line_chart",
+          "histogram",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "diagnostic_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "diagnostic_analysis",
+          "operation": "diagnostic_analysis",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "diagnostic_analysis",
+        "operation": "diagnostic_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "diagnostic_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.896
+    },
+    {
+      "id": "hard_038",
+      "question": "Investigate the spike in error count",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "diagnostic_analysis",
+        "answer_depth": "deep_analysis",
+        "operation": "diagnostic_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.506,
+          "answer_depth": 0.628,
+          "operation": 0.423,
+          "best_chart": 0.513,
+          "chart_required": 0.894,
+          "needs_numeric": 0.932,
+          "needs_category": 0.699,
+          "needs_datetime": 0.649,
+          "needs_text": 0.993
+        },
+        "min_confidence": 0.423,
+        "low_confidence": [
+          "intent",
+          "answer_depth",
+          "operation",
+          "best_chart",
+          "needs_datetime"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "kpi_cards",
+          "bar_chart",
+          "line_chart",
+          "histogram",
+          "correlation_heatmap",
+          "table"
+        ],
+        "fallback_chart": "table",
+        "rules_fired": [
+          "diagnostic_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "diagnostic_analysis",
+          "operation": "diagnostic_analysis",
+          "best_chart": "multi_chart_dashboard"
+        }
+      },
+      "expected": {
+        "intent": "diagnostic_analysis",
+        "operation": "diagnostic_analysis",
+        "best_chart": "multi_chart_dashboard",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": true,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "diagnostic_override"
+      ],
+      "planner_source": "raw_ml_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.423
+    },
+    {
+      "id": "hard_039",
+      "question": "Show errors over time",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "trend_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.967,
+          "answer_depth": 0.96,
+          "operation": 0.939,
+          "best_chart": 0.959,
+          "chart_required": 0.937,
+          "needs_numeric": 0.975,
+          "needs_category": 0.98,
+          "needs_datetime": 0.974,
+          "needs_text": 0.996
+        },
+        "min_confidence": 0.937,
+        "low_confidence": [],
+        "route_to": "ml_planner",
+        "ml_flag": "high_confidence",
+        "confidence_status": "high_confidence",
+        "requires_llm_fallback": false,
+        "planner_source": "raw_ml",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "log_temporal_override"
+        ],
+        "rule_override_applied": false,
+        "raw_ml_prediction": {
+          "intent": "trend_analysis",
+          "operation": "time_groupby_sum",
+          "best_chart": "line_chart"
+        }
+      },
+      "expected": {
+        "intent": "trend_analysis",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "log_temporal_override"
+      ],
+      "planner_source": "raw_ml",
+      "min_confidence": 0.937
+    },
+    {
+      "id": "hard_040",
+      "question": "Track request count by day",
+      "json_valid": true,
+      "intent_correct": true,
+      "operation_correct": true,
+      "best_chart_correct": true,
+      "chart_required_correct": true,
+      "needs_numeric_correct": true,
+      "needs_category_correct": true,
+      "needs_datetime_correct": true,
+      "needs_text_correct": true,
+      "passed": true,
+      "prediction": {
+        "intent": "trend_analysis",
+        "answer_depth": "visual_answer",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        },
+        "confidence_scores": {
+          "intent": 0.667,
+          "answer_depth": 0.839,
+          "operation": 0.55,
+          "best_chart": 0.649,
+          "chart_required": 0.945,
+          "needs_numeric": 0.976,
+          "needs_category": 0.834,
+          "needs_datetime": 0.924,
+          "needs_text": 0.998
+        },
+        "min_confidence": 0.55,
+        "low_confidence": [
+          "operation",
+          "best_chart"
+        ],
+        "route_to": "llm_router",
+        "ml_flag": "low_confidence_fallback",
+        "confidence_status": "low_confidence",
+        "requires_llm_fallback": true,
+        "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+        "recommended_charts": [
+          "line_chart",
+          "area_chart",
+          "bar_chart",
+          "table"
+        ],
+        "fallback_chart": "bar_chart",
+        "rules_fired": [
+          "log_temporal_override"
+        ],
+        "rule_override_applied": true,
+        "raw_ml_prediction": {
+          "intent": "comparison",
+          "operation": "groupby_sum",
+          "best_chart": "bar_chart"
+        }
+      },
+      "expected": {
+        "intent": "trend_analysis",
+        "operation": "time_groupby_sum",
+        "best_chart": "line_chart",
+        "chart_required": true,
+        "required_data_roles": {
+          "needs_numeric": true,
+          "needs_category": false,
+          "needs_datetime": true,
+          "needs_text": false
+        }
+      },
+      "rules_fired": [
+        "log_temporal_override"
+      ],
+      "planner_source": "ml_plus_rules_low_confidence_recommend_llm_fallback",
+      "min_confidence": 0.55
+    }
+  ]
+}

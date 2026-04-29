@@ -1,0 +1,121 @@
+question,source_type,has_numeric,has_category,has_datetime,has_text,expected_intent,expected_operation,expected_best_chart
+"What are the sales of the company?",csv,true,true,true,false,aggregation,sum,kpi_card
+"How much revenue did we make?",csv,true,true,true,false,aggregation,sum,kpi_card
+"What is the average profit?",csv,true,true,true,false,aggregation,mean,kpi_card
+"Which product has the highest sales?",csv,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Who sold the most?",csv,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Compare sales by country",csv,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show revenue by product",csv,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show monthly revenue trend",csv,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"How has revenue changed over time?",csv,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"Are there missing values?",csv,true,true,true,false,data_quality,null_check,table
+"Are there duplicate records?",csv,true,true,true,false,data_quality,duplicate_check,table
+"Do a full analysis of this dataset",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Analyze this dataset and give business insights",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Compare sales and profit",csv,true,true,true,false,correlation,correlation,scatter_plot
+"Show distribution of revenue",csv,true,true,true,false,distribution,distribution,histogram
+"Are there outliers in sales?",csv,true,true,true,false,distribution,outlier_check,box_plot
+"Forecast future sales",csv,true,true,true,false,forecasting,forecast,line_chart
+"Why did sales drop?",csv,true,true,true,false,diagnostic_analysis,diagnostic_analysis,multi_chart_dashboard
+"Analyze customer feedback",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"Find sentiment in reviews",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"What is the average salary?",excel,true,true,true,false,aggregation,mean,kpi_card
+"Which department has the highest salary?",excel,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Compare attrition rate by department",excel,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show salary trend over time",excel,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"Are there duplicate employee records?",excel,true,true,true,false,data_quality,duplicate_check,table
+"What is the average treatment cost?",csv,true,true,true,false,aggregation,mean,kpi_card
+"Which diagnosis has the highest patient count?",csv,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Compare treatment cost by hospital",csv,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show patient count trend over time",csv,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"What is the average score?",csv,true,true,true,false,aggregation,mean,kpi_card
+"Which subject has the highest score?",csv,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Compare attendance by class",csv,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show score distribution",csv,true,true,true,false,distribution,distribution,histogram
+"What is the total expense?",parquet,true,true,true,false,aggregation,sum,kpi_card
+"Compare expense by category",parquet,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show monthly income trend",parquet,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"Why did profit decrease?",parquet,true,true,true,false,diagnostic_analysis,diagnostic_analysis,multi_chart_dashboard
+"What is the total orders?",csv,true,true,true,false,aggregation,sum,kpi_card
+"Which channel generated the highest revenue?",csv,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Compare cart value by customer",csv,true,true,true,false,comparison,groupby_sum,bar_chart
+"Forecast future orders",csv,true,true,true,false,forecasting,forecast,line_chart
+"What is the total clicks?",csv,true,true,true,false,aggregation,sum,kpi_card
+"Which campaign has the highest conversion rate?",csv,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Compare spend by channel",csv,true,true,true,false,comparison,groupby_sum,bar_chart
+"Show impressions trend over time",csv,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"What is the average response time?",json,true,true,true,true,aggregation,mean,kpi_card
+"Which service has the highest error count?",json,true,true,true,true,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Show errors over time",json,true,true,true,true,trend_analysis,time_groupby_sum,line_chart
+"Find anomalies in traffic logs",json,true,true,true,true,diagnostic_analysis,diagnostic_analysis,multi_chart_dashboard
+"What is the average temperature?",parquet,true,true,true,false,aggregation,mean,kpi_card
+"Which device has the highest sensor value?",parquet,true,true,true,false,ranking,groupby_sum_sort_desc,horizontal_bar_chart
+"Show temperature trend over time",parquet,true,true,true,false,trend_analysis,time_groupby_sum,line_chart
+"Are there outliers in humidity?",parquet,true,true,true,false,distribution,outlier_check,box_plot
+"Show correlation between revenue and profit",csv,true,true,true,false,correlation,correlation,scatter_plot
+"Are sales and profit related?",csv,true,true,true,false,correlation,correlation,scatter_plot
+"Compare price and quantity relationship",csv,true,true,false,false,correlation,correlation,scatter_plot
+"Is there a relationship between discount and profit?",csv,true,true,true,false,correlation,correlation,scatter_plot
+"How are expenses and income related?",parquet,true,true,true,false,correlation,correlation,scatter_plot
+"Compare clicks and conversions",csv,true,true,true,false,correlation,correlation,scatter_plot
+"Is response time related to error count?",json,true,true,true,true,correlation,correlation,scatter_plot
+"Compare temperature and pressure",parquet,true,true,true,false,correlation,correlation,scatter_plot
+"Show relationship between attendance and score",csv,true,true,true,false,correlation,correlation,scatter_plot
+"Give me a full summary of the file",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Analyze this file and explain the main patterns",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Give me a business overview of this dataset",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"What are the main insights in this data?",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Summarize everything important in this dataset",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Create an executive summary from this data",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Give me a dashboard-style analysis",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Tell me what this dataset is showing",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Give me a quick but complete analysis",csv,true,true,true,false,summary_analysis,full_dataset_analysis,multi_chart_dashboard
+"Which columns have missing values?",csv,true,true,true,false,data_quality,null_check,table
+"Check for nulls in this file",csv,true,true,true,false,data_quality,null_check,table
+"Any blanks in the dataset?",csv,true,true,true,false,data_quality,null_check,table
+"Find empty values",csv,true,true,true,false,data_quality,null_check,table
+"Show null value counts",csv,true,true,true,false,data_quality,null_check,table
+"Are any fields missing data?",csv,true,true,true,false,data_quality,null_check,table
+"Tell me if the dataset has missing entries",csv,true,true,true,false,data_quality,null_check,table
+"Find incomplete records",csv,true,true,true,false,data_quality,null_check,table
+"Which columns are incomplete?",csv,true,true,true,false,data_quality,null_check,table
+"Summarize the review text",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"What do the comments say?",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"Summarize customer complaints",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"Give me a summary of feedback messages",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"What are users saying in the reviews?",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"Summarize support ticket descriptions",json,false,true,true,true,text_analysis,text_summary,bar_chart
+"Read the comments and summarize them",csv,false,true,false,true,text_analysis,text_summary,bar_chart
+"What is the main theme in the feedback?",json,false,true,false,true,text_analysis,text_summary,bar_chart
+"Summarize open-ended responses",csv,false,true,false,true,text_analysis,text_summary,bar_chart
+"What is the sentiment of customer reviews?",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Are reviews mostly positive or negative?",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Analyze sentiment in comments",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Show sentiment breakdown for feedback",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Classify review sentiment",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Are customers happy based on feedback?",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Find negative feedback themes",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"Check whether support tickets sound negative",json,false,true,true,true,text_analysis,sentiment_summary,bar_chart
+"Analyze user satisfaction from comments",json,false,true,false,true,text_analysis,sentiment_summary,bar_chart
+"What words appear most often in reviews?",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"Show common words in feedback",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"Find frequent terms in comments",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"What are the top keywords in reviews?",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"Show word frequency for support tickets",json,false,true,true,true,text_analysis,word_frequency,bar_chart
+"Find repeated words in customer feedback",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"What phrases appear most in open responses?",csv,false,true,false,true,text_analysis,word_frequency,bar_chart
+"Show most mentioned topics in comments",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"Find common complaint words",json,false,true,false,true,text_analysis,word_frequency,bar_chart
+"Show correlation heatmap for numeric columns",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Create a heatmap of numeric relationships",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Show all numeric correlations",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Build a correlation matrix",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Show relationships among all metrics",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Correlation matrix for financial metrics",parquet,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Heatmap for sales profit and discount",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Show numeric feature correlation",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Compare all numeric columns together",csv,true,true,true,false,correlation,correlation_heatmap,heatmap
+"Show failures by day",json,true,true,true,true,trend_analysis,time_groupby_sum,line_chart
+"Plot exceptions per hour",json,true,true,true,true,trend_analysis,time_groupby_sum,line_chart
+"Show latency trend over time",json,true,true,true,true,trend_analysis,time_groupby_sum,line_chart
+"Track request count by day",json,true,true,true,true,trend_analysis,time_groupby_sum,line_chart
